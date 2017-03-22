@@ -16,16 +16,12 @@ const manifest = {
       env: env,
       debug: debug,
       repo_root: Path.join(__dirname, '../../'),
-    },
-    load: {
-      sampleInterval: 5
     }
   },
   connections: [
     {
       port: port,
       routes: {
-        security: !debug,
         files: {
           relativeTo: Path.join(__dirname, '../client')
         }
@@ -42,7 +38,7 @@ const manifest = {
               {
                 module: 'good-squeeze',
                 name: 'Squeeze',
-                args: [{log: '*', response: '*', error: '*', request: '*', ops: '*'}]
+                args: [{log: '*', response: '*', error: '*', request: '*'}]
               }, {
                 module: 'good-console',
               },
