@@ -12,4 +12,4 @@ script:
 - yarn test
 after_success:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-  - ./scripts/ci-deployment/docker_ci.sh
+  - ./ci-deployment/docker_ci.sh
